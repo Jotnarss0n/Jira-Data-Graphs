@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+
+# Plot trends for Created and Resolved tickets
+plt.figure(figsize=(14, 7))
+plt.plot(df["Period"], df["Created"], label="Created Tickets", marker="o")
+plt.plot(df["Period"], df["Resolved"], label="Resolved Tickets", marker="o")
+plt.xlabel("Period")
+plt.ylabel("Number of Tickets")
+plt.title("Ticket Trends Over Time")
+plt.xticks(rotation=90, fontsize=8)  # Rotate x-axis labels for readability
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+
+plt.show()
